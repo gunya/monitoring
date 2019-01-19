@@ -3,7 +3,8 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.hepexta.monitoring</groupId>
 	<artifactId>zipkin</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <version>0.0.1-SNAPSHOT</version>
 	<name>Zipkin</name>
 	<description>Zipkin</description>
 
@@ -15,6 +16,16 @@
 
 	<modules>
 		<module>zipkin-spring</module>
-	</modules>
+        <module>zipkin-plain-java</module>
+    </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>

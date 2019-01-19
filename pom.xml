@@ -5,6 +5,7 @@
 	<artifactId>monitoring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Monitoring staff</name>
+	<packaging>pom</packaging>
 	<description>Monitoring staff</description>
 
 	<modules>		
