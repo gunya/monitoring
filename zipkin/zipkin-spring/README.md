@@ -12,6 +12,7 @@ https://zipkin.io/
 4) Spring Application Properties
 
     **spring.application.name**=`zipkin-spring`
+    
     **spring.zipkin.baseUrl**=`http://localhost:9411/`
     
     _By default Spring Cloud Sleuth sets all spans to non-exportable.
@@ -21,10 +22,13 @@ https://zipkin.io/
     **spring.sleuth.sampler.probability**=`1.0`
     
     _Synchronous Rest Template tracing_
+    
     **spring.sleuth.web.client.enabled**=`true`
     
     _HTTP integration_
+    
     **spring.sleuth.web.enabled**=`true`
     
     _To disable zipkin tracing use this property:_
+    
     **spring.zipkin.enabled**=`false`
