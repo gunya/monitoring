@@ -1,11 +1,22 @@
 package com.hepexta.monitoring.zipkinplainjava.code;
 
+import com.hepexta.monitoring.zipkinplainjava.tracer.LocalTracerImpl;
+
 public class DummyAggregator {
 
     public String execute(String str) {
+        LocalTracerImpl tracer = startLocalTracer();
+        String result = null;
         if (DummyValidator.validate(str)){
-            return DummyParser.parse(str);
+            result = DummyParser.parse(str);
         }
-        return null;
+        tracer.close();
+        return result;
+    }
+
+    private LocalTracerImpl startLocalTracer() {
+        LocalTracerImpl tracer = LocalTracerImpl.getInstance();
+        tracer.start();
+        return tracer;
     }
 }
