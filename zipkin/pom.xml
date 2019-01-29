@@ -17,6 +17,7 @@
 	<modules>
 		<module>zipkin-spring</module>
         <module>zipkin-plain-java</module>
+		<module>zipkin-spring-embedded</module>
     </modules>
 
     <dependencies>
